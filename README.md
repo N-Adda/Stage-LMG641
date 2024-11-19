@@ -1,4 +1,4 @@
-# Python automatisation mesures LMG641 / Stage
+# Introduction : Automatisation mesures LMG641 en Python / Stage
 Le programme a été réalisé intégralement en Python qui permet une connexion à l'outil Zes Zimmer Precision Power Analyzer LMG641 pour contrôler et automatiser les mesures faites par la machine sur un appareil électronique branché.
 Le programme a été testé et fonctionne sous [Windows] ainsi que [Linux]
 
