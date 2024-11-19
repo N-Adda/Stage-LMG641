@@ -23,8 +23,8 @@ Afin d'utiliser correctement le programme, il est d'abord nécessaire de correct
     - En cas d'IP différente à celle par défaut : `python3 powerlog641.py -host XXX.XXX.X.XXX`
     
 La console devrait alors afficher le nombres de cycles de mesures et une fenêtre graphique devrait s'ouvrir durant la mesure donnant un aperçu visuel de celle-ci, avec la possibilité de déplacer le curseur de la souris pour y afficher les valeurs en abscisses et ordonnées. La fenêtre graphique se fermera lorsque le programme aura fini ses cycles de mesures et sera remplacé par un dossier crée automatiquement dans l'espace de travail contenant deux fichiers :
-        - Un fichier Excel répétoriant les valeurs numériques mesurées au travers des cycles
-        - Un fichier PNG affichant une capture visuelle des derniers graphes à la fin des cycles.
+    - Un fichier Excel répétoriant les valeurs numériques mesurées au travers des cycles
+    - Un fichier PNG affichant une capture visuelle des derniers graphes à la fin des cycles.
 
 ## Contributeurs
 
