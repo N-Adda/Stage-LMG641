@@ -61,10 +61,8 @@ def main():
     
     lmg.select_values(VAL)
 
-    #log = open(args.logfile, "w")
     i = 0
     row = 1
-    #graph = []
 
     graph = {v: deque(maxlen=args.plot) for v in VAL}
 
@@ -79,7 +77,6 @@ def main():
 
     try:
         lmg.cont_on()
-        #log.write("--> " + "           ".join(VAL) + "\n")
 
         for col_val, value in enumerate(VAL):
             worksheet.write(0,col_val, value)
@@ -134,9 +131,6 @@ def main():
             for v, val in zip(VAL, data):
                 valeur = val.strip().split('\n')
                 graph[v].append(float(valeur[0]))
-                
-
-            #for v in VAL:
                 lines[v].set_data(range(len(graph[v])), graph[v])
                 
             ax.relim()
@@ -144,22 +138,11 @@ def main():
 
             plt.pause(args.interval) 
             
-            #data[0] = data[0] + " s" 
-            #data[1] = data[1] + " V"
-            #data[2] = data[2] + " A"
-            #data[3] = data[3] + " V"
-            #data[4] = data[4] + " A"
-            #data[5] = data[5] + " W"
-            #data[6] = data[6] + " A"
-            
             if args.verbose == 1:
                 sys.stdout.write(" ".join([ str(x) for x in data ]) + "\n") #Output too long
             else:
                 sys.stdout.write("\r{0}".format(i) + "/" + str(args.duree))
             sys.stdout.flush()
-            #log.write(" ".join([ str(x) for x in data ]) + "\n")
-            #col+= 1
-            #log.flush()
 
             if args.duree == i:
                 break
@@ -168,20 +151,6 @@ def main():
         print
 
     lmg.cont_off()
-
-    
-    #log.close()
-
-    #if graph:
-       # plt.figure()
-
-        #for x,y in enumerate(VAL):
-         #   plt.plot([d[x] for d in graph if len(d) > x], label=y )
-        #plt.legend()
-        #plt.xlabel("Nombres de cycles")
-        #plt.ylabel("Valeurs")
-        #plt.title("Données mesurées")
-        #plt.show()
     
     while True:
         try:
