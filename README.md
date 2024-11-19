@@ -2,8 +2,8 @@
 Le programme a été réalisé intégralement en Python qui permet une connexion à l'outil Zes Zimmer Precision Power Analyzer LMG641 pour contrôler et automatiser les mesures faites par la machine sur un appareil électronique branché.
 Le programme a été testé et fonctionne sous [Windows] ainsi que [Linux]
 
-[Windows]: "Windows"
-[Linux]: "Linux"
+[Windows]: https://www.microsoft.com/fr-fr/windows?r=1 "Windows"
+[Linux]: https://www.linux.org/ "Linux"
 
 ### Informations
 Ce projet fait suite à une période de stage effectuée du 23/09/2024 au 10/01/2025. Il peut donc présenter quelques failles ou problèmes d'optimisations.
