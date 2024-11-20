@@ -59,15 +59,12 @@ Cependant si vous souhaitez mesurer d'autres valeurs, il est possible d'utiliser
 - p (PLOT) --> Permet de régler la taille de la fenêtre graphique afin d'observer un champ plus ou moins vaste de données. A savoir que les données qui dépassent ce champs ne sont plus observables ensuite. Ainsi cela signifie que si la fenêtre est fixée à 100, elle permet d'observer les données acquises les 100 derniers cycles et non au delà. A savoir qu'à la fin du programme, une capture est faites des données dépendant alors intégralement de la taille de la fenêtre. Par défaut la valeure est fixée à 100 cycles observables afin d'éviter des graphes trop écrasés.
     - `python3 powerlog641.py -d 1000 -p 100` --> Lance une acquisition de 1000 cycles et observe alors à chaque fois les données sur 100 cycles. Les 100 derniers cycles (données de 900 à 1000 cycles) sont capturés via un screenshot et sauvegardés dans le dossier
 
-- a (AUTO AUTO) --> Permet de calibrer les intervales de mesures Courant/Tension du LMG641. Cette fonction est utile si l'on souhaite effectuer des mesures à partir d'un certain seuil de consommation de l'outil que l'on mesure et ignorer les valeurs en dessous du seuil définit. A savoir que pour fonctionner, le calibrage doit être fait avec des valeurs précises définit par le LMG641 en Courant et Tension auquel cas il ne sera pas pris en compte par le LMG641 et fonctionnera en mode auto :
+- a (AUTO AUTO) --> Permet de calibrer les intervales de mesures Courant/Tension du LMG641. Cette fonction est utile si l'on souhaite effectuer des mesures en sélectionnant le capteur souhaitée pour réguler la précision. A savoir que pour fonctionner, le calibrage doit être fait avec des valeurs précises définit par le LMG641 en Courant et Tension auquel cas il ne sera pas pris en compte par le LMG641 et fonctionnera en mode auto :
 Tension (en V) : 3.0, 6.0, 12.5, 25.0, 60.0, 130.0, 250.0, 400.0, 600.0, 1000.0
 Courant (en A) : 0.005, 0.01, 0.02, 0.04, 0.08, 0.150, 0.300, 0.600, 1.2, 2.5, 5.0, 10.0, 20.0, 32.0
 Par défaut, la machine utilise un calibrage automatique, c'est à dire que les valeurs s'adaptent à l'appreil que l'on branche afin de pouvoir directement mesurer la consommation de celui-ci 
     - `python3 powerlog641.py -a 10.0 250.0` --> L'appareil est calibré pour 10A ainsi que 250V et ne détectera aucune valeurs n'avoisinant pas ces valeurs. Exemple la consommation d'une radio 5V aux alentours de 100mA affichera des valeurs à 0 sur le programme
     - `python3 powerlog641.py` ou `python3 powerlog641.py -a 0.0 0.0` --> Utilise le calibrage automatique qui s'adaptera directement à l'appareil branché.
-
-
-
 
 
 ## Contributeurs
