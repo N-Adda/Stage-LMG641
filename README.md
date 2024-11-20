@@ -1,14 +1,14 @@
-# Introduction : Automatisation mesures LMG641 en Python / Stage
+# **Introduction : Automatisation mesures LMG641 en Python / Stage**
 Le programme a été réalisé intégralement en Python qui permet une connexion à l'outil Zes Zimmer Precision Power Analyzer LMG641 pour contrôler et automatiser les mesures faites par la machine sur un appareil électronique branché.
 Le programme a été testé et fonctionne sous [Windows] ainsi que [Linux]
 
 [Windows]: https://www.microsoft.com/fr-fr/windows?r=1 "Windows"
 [Linux]: https://www.linux.org/ "Linux"
 
-### Informations
+### **Informations**
 Ce projet fait suite à une période de stage effectuée du 23/09/2024 au 10/01/2025. Il peut donc présenter quelques failles ou problèmes d'optimisations.
 
-# Configuration & Mesures
+# **Configuration & Mesures**
 
 Afin d'utiliser correctement le programme, il est d'abord nécessaire de correctement prendre en main l'outil de mesure LMG641. La connexion entre l'ordinateur et le LMG641 nécessite qu'ils soient tout deux reliés au même réseau et se fait grâce à l'adresse IP de la machine.
 
@@ -26,7 +26,7 @@ La console devrait alors afficher le nombres de cycles de mesures et une fenêtr
 - Un fichier Excel répétoriant les valeurs numériques mesurées au travers des cycles
 - Un fichier PNG affichant une capture visuelle des derniers graphes à la fin des cycles.
 
-**Fonctionnalités :**
+# **Fonctionnalités**
 Le programme présente divers paramètres qui sont modifiables. Il est possible d'en connaître les détails d'utilisation via la commande `-help` dans un terminal. Cependant il est intéressant d'en connaître les détails :
 
 - val --> Permet de définir les valeurs qu'on souhaite mesure via le LMG641. Par défaut si l'on ne rempli rien, le programme mesurera la tension, le courant ainsi que la puissance de l'appareil brancher au LMG641. Les valeurs mesurables sont affichés par le LMG641 dans la catégorie MEASUREMENT en appuyant sur "DEFAULT". Cependant si vous souhaitez mesurer d'autres valeurs, il est possible d'utiliser l'arg val de façon suivante : 
