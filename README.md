@@ -4,7 +4,7 @@ Le programme a été testé et fonctionne sous [Windows] ainsi que [Linux]
 
 [Windows]: https://www.microsoft.com/fr-fr/windows?r=1 "Windows"
 [Linux]: https://www.linux.org/ "Linux"
-[noms de variables valides]: " "
+[noms de variables valides]: var "var"
 
 ### **Informations**
 Ce projet fait suite à une période de stage effectuée du 23/09/2024 au 10/01/2025. Il peut donc présenter quelques failles ou problèmes d'optimisations.
