@@ -4,6 +4,7 @@ Le programme a été testé et fonctionne sous [Windows] ainsi que [Linux]
 
 [Windows]: https://www.microsoft.com/fr-fr/windows?r=1 "Windows"
 [Linux]: https://www.linux.org/ "Linux"
+[noms de variables valides]: " "
 
 ### **Informations**
 Ce projet fait suite à une période de stage effectuée du 23/09/2024 au 10/01/2025. Il peut donc présenter quelques failles ou problèmes d'optimisations.
@@ -33,7 +34,8 @@ La console devrait alors afficher le nombres de cycles de mesures et une fenêtr
 # **Fonctionnalités**
 Le programme présente divers paramètres qui sont modifiables. Il est possible d'afficher les arguments via la commande `-help` dans un terminal. Cependant il est intéressant d'en connaître les détails :
 
-- val --> Permet de définir les valeurs qu'on souhaite mesure via le LMG641. Par défaut si l'on ne rempli rien, le programme mesurera la tension, le courant ainsi que la puissance de l'appareil brancher au LMG641. Les valeurs mesurables sont affichés par le LMG641 dans la catégorie MEASUREMENT en appuyant sur "DEFAULT". A savoir qu'il est très important de saisir des [noms de variables valides] afin d'éviter tout problème de mesure. Cependant si vous souhaitez mesurer d'autres valeurs, il est possible d'utiliser l'arg val de façon suivante :
+- val --> Permet de définir les valeurs qu'on souhaite mesure via le LMG641. Par défaut si l'on ne rempli rien, le programme mesurera la tension, le courant ainsi que la puissance de l'appareil brancher au LMG641. Les valeurs mesurables sont affichés par le LMG641 dans la catégorie MEASUREMENT en appuyant sur "DEFAULT". A savoir qu'il est très important de saisir des [noms de variables valides] afin d'éviter tout problème de mesure. 
+Cependant si vous souhaitez mesurer d'autres valeurs, il est possible d'utiliser l'arg val de façon suivante :
     - `python3 powerlog641.py "durnorm utrms itrms iac idc udc uac"` --> Le programme mesurera donc la période, la tension, le courant, le courant alternatif, la tension alternatif etc. . .
 
 
