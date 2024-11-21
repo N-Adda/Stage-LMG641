@@ -136,13 +136,13 @@ class lmg641(lmg641_socket):
         return self.recv_str().split(";")
         #if not rep:
          #   print ("donnée vide")
-          #  return []
+         #   return []
         #print ("donnée présente")
         #return rep.split(";")
         
     #def read_float_values(self):
-     #   values_raw = self.read_raw_values()
-      #  return [ float(x) for x in values_raw ]
+    #    values_raw = self.read_raw_values()
+    #    return [ float(x) for x in values_raw ]
 
     def read_float_values(self):
         values_raw = self.read_raw_values()
