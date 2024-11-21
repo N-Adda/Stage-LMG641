@@ -67,7 +67,8 @@ Par défaut, la machine utilise un calibrage automatique, c'est à dire que les 
     - `python3 powerlog641.py` ou `python3 powerlog641.py -a 0.0 0.0` --> Utilise le calibrage automatique qui s'adaptera directement à l'appareil branché.
 
 # **Résolution des problèmes**
+Cette section traite les problèmes que l'on peut rencontrer lors de la première execution du programme et la manière de les régler
 
-## **Contributeurs**
+## **Contributeurs** 
 
 Jan de Cuveland --> Le code développé se base sur son travail ayant mis a disposition un socket déjà fait permettant le lien entre l'ordinateur et le LMG641
