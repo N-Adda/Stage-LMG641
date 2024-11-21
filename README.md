@@ -66,7 +66,8 @@ Par défaut, la machine utilise un calibrage automatique, c'est à dire que les 
     - `python3 powerlog641.py -a 10.0 250.0` --> L'appareil est calibré pour 10A ainsi que 250V et ne détectera aucune valeurs n'avoisinant pas ces valeurs. Exemple la consommation d'une radio 5V aux alentours de 100mA affichera des valeurs à 0 sur le programme
     - `python3 powerlog641.py` ou `python3 powerlog641.py -a 0.0 0.0` --> Utilise le calibrage automatique qui s'adaptera directement à l'appareil branché.
 
+# **Résolution des problèmes**
 
-## Contributeurs
+## **Contributeurs**
 
 Jan de Cuveland --> Le code développé se base sur son travail ayant mis a disposition un socket déjà fait permettant le lien entre l'ordinateur et le LMG641
