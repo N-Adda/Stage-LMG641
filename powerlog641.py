@@ -65,6 +65,7 @@ def main():
     row = 1
 
     graph = {v: deque(maxlen=args.plot) for v in VAL}
+    graph_final = {v: deque(maxlen=args.duree) for v in VAL}
 
     figure, ax = plt.subplots()
     lines = {v: ax.plot([], [], label=v)[0] for v in VAL}
@@ -103,7 +104,7 @@ def main():
                 if decision == 'n':
                     print("Programme terminé")
                     sys.exit(0)
-            figure.savefig(path + ".png")
+            #figure.savefig(path + ".png")
             nonlocal boucle
             boucle = False
         
@@ -131,6 +132,7 @@ def main():
             for v, val in zip(VAL, data):
                 valeur = val.strip().split('\n')
                 graph[v].append(float(valeur[0]))
+                graph_final[v].append(float(valeur[0]))
                 lines[v].set_data(range(len(graph[v])), graph[v])
                 
             ax.relim()
@@ -145,6 +147,7 @@ def main():
             sys.stdout.flush()
 
             if args.duree == i:
+                plt.close()
                 break
            
     except KeyboardInterrupt:
@@ -167,8 +170,19 @@ def main():
                 continue
         break
 
+    final_figure, final_ax = plt.subplots(figsize=(10, 6))
+    for v in VAL:
+        final_ax.plot(range(len(graph_final[v])), graph_final[v], label=v)
 
-    
+    final_ax.set_title("Données mesurées")
+    final_ax.set_xlabel("Nombre de cycles")
+    final_ax.set_ylabel("Valeurs")
+    final_ax.legend()
+    final_ax.grid(True)
+    final_figure.savefig(path + ".png")
+
+    plt.show()
+
     lmg.disconnect()
     print ("\nTerminé", i)
 
