@@ -65,7 +65,7 @@ def main():
     row = 1
 
     graph = {v: deque(maxlen=args.plot) for v in VAL}
-    graph_final = {v: deque(maxlen=args.duree) for v in VAL}
+    graph_final = {v: [] for v in VAL}
 
     figure, ax = plt.subplots()
     lines = {v: ax.plot([], [], label=v)[0] for v in VAL}
