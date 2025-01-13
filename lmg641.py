@@ -1,11 +1,3 @@
-#!/usr/bin/python
-
-# lmg670.py
-#
-# Implement interface to ZES Zimmer LMG670 1 to 7 Channel Power Analyzer
-#
-# 2015-01, Jan de Cuveland
-
 import socket
 
 EOS = "\n"
@@ -27,7 +19,7 @@ class lmg641_socket:
         self._s.sendall((msg + EOS).encode())
 
     def recv_str(self):
-        response = b""  # Initialise response comme bytes
+        response = b""  
         while True:
             try:
                 response += self._s.recv(4096) 
